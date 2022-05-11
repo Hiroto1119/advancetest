@@ -15,5 +15,8 @@
 @extends('layouts.layout')
 
 @section('content')
-<h1>{{ __('送信完了') }}</h1>
+<p>{{ __('ご意見いただきありがとうございました。') }}</p>
+<button onclick="location.href='/contact'" class=center>
+    トップページへ
+</button>
 @endsection

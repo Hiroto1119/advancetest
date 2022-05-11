@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
+// Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
 
 
 Route::post('/update', [TodoController::class, 'update'])->name('todo.update');
