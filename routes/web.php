@@ -21,8 +21,5 @@ Route::get('/', function () {
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
-// Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
-
-
-Route::post('/update', [TodoController::class, 'update'])->name('todo.update');
-Route::post('/delete', [TodoController::class, 'delete'])->name('todo.delete');
+Route::get('/contact/search', [ContactController::class, 'search'])->name('contact.search');
+Route::get('/contact/result', [ContactController::class, 'result'])->name('contact.result');
