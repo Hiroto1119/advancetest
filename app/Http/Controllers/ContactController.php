@@ -53,16 +53,30 @@ class ContactController extends Controller
     {
         // キーワードを取得
         $keyword = $request->input('name');
-
         //クエリ作成
         $query = Contact::query();
-
         //キーワードが入力されている場合
         if(!empty($keyword)){
-        $query->where('fullname', 'like', '%'.$keyword.'%');
+            $query->where('fullname', 'like', '%'.$keyword.'%');
         }
 
+        $gender = $request->input('gender');
+        if(!empty($gender)){
+            $query->where('gender', $gender);
+        }
+
+        // 登録日
+
+        $email = $request->input('email');
+        if(!empty($email)){
+            $query->where('email', 'like', '%'.$email.'%');
+        }
+
+
+
         $posts = $query->get();
+
+
 
         return view('contact.search', ['posts' => $posts]);
     }
