@@ -4,7 +4,7 @@
 <div class="container">
     <h1 class="text-center">管理システム</h1>
 
-    <form class="form-horizontal" method="GET" action="{{ route('contact.result') }}">
+    <form class="form-horizontal" method="GET" action="{{ route('contact.search') }}">
         @csrf
         <div class="form-group">
             <label>名前</label>
@@ -47,13 +47,13 @@
             <th>メールアドレス</th>
             <th>ご意見</th>
         </tr>
-        @foreach($messages as $message)
+        @foreach($posts as $post)
         <tr>
-            <td>{{$message->id}}</td>
-            <td>{{$message->fullname}}</td>
-            <td>{{$message->gender}}</td>
-            <td>{{$message->email}}</td>
-            <td>{{Str::limit($message->opinion, 25, '...')}}</td>
+            <td>{{$post->id}}</td>
+            <td>{{$post->fullname}}</td>
+            <td>{{$post->gender}}</td>
+            <td>{{$post->email}}</td>
+            <td>{{Str::limit($post->opinion, 25, '...')}}</td>
         </tr>
         @endforeach
         </table>

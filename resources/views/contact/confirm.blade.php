@@ -59,13 +59,6 @@
         type="hidden">
     <br>
 
-    {{-- <button type="submit" name="action" value="back">
-        入力内容修正
-    </button>
-    <button name="back" type="submit" value="true">修正する</button>
-    <a href="/contact">修正する</a>
-        送信する
-    </button> --}}
     <button name="action" type="submit" value="true">登録</button>
     <br>
     <button name="back" type="submit" value="true">戻る</button>
