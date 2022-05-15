@@ -18,11 +18,18 @@
             <input type="radio" name="gender" value = "1">女性
         </div>
 
+
         <div class="form-group">
+            {{-- <label>登録日</label>
+            <input type="text" class="form-control col-md-5" name="register_date"> --}}
             <label>登録日</label>
-            <input type="text" class="form-control col-md-5" name="register_date">
+            <br>
+            <input type="date" name="from" placeholder="from_date">
+                <span class="mx-3 text-grey">~</span>
+            <input type="date" name="until" placeholder="until_date">
         </div>
 
+        
         <div class="form-group">
             <label>メールアドレス</label>
             <input type="text" class="form-control col-md-5" name="email">

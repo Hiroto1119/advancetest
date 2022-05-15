@@ -37,7 +37,7 @@ class ContactController extends Controller
         }
 
         $contact = new Contact();
-        $contact->fullname = $request->name;
+        $contact->fullname = $request->last_name.' '.first_name;
         $contact->gender = $request->gender;
         $contact->email = $request->email;
         $contact->postcode = $request->postcode;
@@ -61,11 +61,28 @@ class ContactController extends Controller
         }
 
         $gender = $request->input('gender');
-        if(!empty($gender)){
+        if(isset($gender)){
             $query->where('gender', $gender);
         }
 
         // 登録日
+        // $register_date = $request->input('from, until');
+        // if (!empty($request['from']) && !empty($request['until'])) {
+        // ハッシュタグの選択された20xx/xx/xx ~ 20xx/xx/xxのレポート情報を取得
+        //     $query->where('gender', $gender);
+
+        // $date = Date::getDate($request['from'], $request['until']);
+
+        // $date = $request->input('gender');
+        // if (!empty($request['from']) && !empty($request['until'])) {
+        //     ハッシュタグの選択された20xx/xx/xx ~ 20xx/xx/xxのレポート情報を取得
+        //     $date = Date::getDate($request['from'], $request['until']);
+        // } else {
+        //     リクエストデータがなければそのままで表示
+        //     $date = Date::get();
+        // }
+
+
 
         $email = $request->input('email');
         if(!empty($email)){

@@ -11,8 +11,11 @@
 
         <div class="form-group row">
             <label class="col-sm-2 control-label">お名前 <span class="label label-danger">必須</span></label>
-            <div class="col-sm-10">
-                <input class="form-control" name="name" value="{{ old('name') }}" type="text">
+            <div class="col-sm-3">
+                <input class="form-control" name="last_name" value="{{ old('last_name') }}" type="text">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" name="first_name" value="{{ old('first_name') }}" type="text">
             </div>
         </div>
         @if ($errors->has('name'))
